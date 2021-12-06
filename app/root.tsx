@@ -1,4 +1,4 @@
-import { LiveReload } from "remix";
+import { LiveReload, Outlet } from "remix";
 
 function root() {
   return (
@@ -9,6 +9,7 @@ function root() {
       </head>
       <body>
         <h1>Hello World!!!!!</h1>
+        <Outlet />
         {process.env.NODE_ENV === "development" ? <LiveReload /> : null}
       </body>
     </html>
@@ -16,4 +17,3 @@ function root() {
 }
 
 export default root;
-
